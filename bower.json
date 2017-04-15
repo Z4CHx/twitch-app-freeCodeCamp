@@ -1,0 +1,20 @@
+{
+  "name": "bower-install bootstrap-sass --save",
+  "authors": [
+    "Zachary Durland <zacharydurland@gmail.com>"
+  ],
+  "description": "twitch-app",
+  "main": "exit",
+  "keywords": [
+    "none"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

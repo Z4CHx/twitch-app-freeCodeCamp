@@ -1,0 +1,33 @@
+.main-container {
+    
+}
+
+* {
+    
+    border: 1px solid black;
+    
+}
+
+
+
+.channel {
+    height: 75px;
+    border: 1px solid purple;
+}
+
+
+.channel-logo {
+    height: 75px;
+}
+
+.channel-logo img {
+    height: inherit;
+}
+
+.channel-id {
+    
+}
+
+.stream-status {
+    
+}
