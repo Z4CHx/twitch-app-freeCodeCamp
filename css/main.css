@@ -13,12 +13,12 @@ div {
 
 
 div.channel {
-    background-color: cadetblue;
+    background-color: lightgray;
     color: white;
 }
 
 div.channel a {
-    color: white;
+    color: cornflowerblue;
     text-decoration: none;
 }
 
