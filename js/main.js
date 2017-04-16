@@ -15,11 +15,11 @@ $(document).ready(function(){
     },
     success: function(data1){
         
-        var userInfo = '<div class="row"><div class="channel col-md-12"><div class="channel-logo col-md-1"><img src="' + data1.logo + '"></div>' + '<div class="channel-id col-md-6">' + data1.display_name + '</div>' + '<div class="streaming-status col-md-5"</div></div></div>';
+        var userInfo = '<div="row"><div class="container-fluid channel"><div class="panel-body"><div class="channel-logo col-md-4"><a href ="' + data1.url + '"><img src="' + data1.logo + '"></a></div>' + '<div class="channel-id col-md-4"><a href="' + data1.url + '">' + data1.display_name + '</a></div><div class="stream-status col-md-4"></div></div></div></div>';
         
         console.log(data1);
         console.log(data1.display_name);
-        $("div.container").append(userInfo); 
+        $("body").append(userInfo); 
     }
     });
     
@@ -35,9 +35,9 @@ $(document).ready(function(){
         
         console.log(data1);
         if (data1.stream !== null){
-            $("div.streaming-status").text("Streaming");
+            $("div.stream-status").text("Streaming");
         } else {
-            $("div.streaming-status").text("Not Streaming"); 
+            $("div.stream-status").text("Not Streaming"); 
         }
          
     }
