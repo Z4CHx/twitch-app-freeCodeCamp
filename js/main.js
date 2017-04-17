@@ -72,14 +72,18 @@ $(document).ready(function(){
 
         }}); 
          
-    });}, 1000);
+    });}, 250);
     
     $('#now-streaming-btn').on('click',function(){
         $("div.Offline").hide();
+        $(this).addClass("active");
+        $('#all-channels-btn').removeClass('active');
     });
     
     $('#all-channels-btn').on('click',function(){
         $("div.Offline").show();
+        $(this).addClass("active");
+        $('#now-streaming-btn').removeClass('active');
     });
         
 
