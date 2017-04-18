@@ -55,7 +55,7 @@ $(document).ready(function(){
         statusCode: {
             404: function(data) {
             
-            var channelRow = '<div id="' + channel + '" class="row channel Offline"><div class="container-fluid"><div class="panel-body"><div class="channel-logo no-logo col-md-4"><a href ="#"><img src="img/box.svg"></a></div><div class="channel-id col-md-4"><a href="#">' + channel + '</a></div><div class="stream-status col-md-4">Channel Not Found</div></div></div></div>';
+            var channelRow = '<div id="' + channel + '" class="row channel not-found"><div class="container-fluid"><div class="panel-body"><div class="channel-logo no-logo col-md-4"><a href ="#"><img src="img/box.svg"></a></div><div class="channel-id col-md-4"><a href="#">' + channel + '</a></div><div class="stream-status col-md-4">Channel Not Found</div></div></div></div>';
                 
                 $("div#channels").append(channelRow);
                 
@@ -71,7 +71,7 @@ $(document).ready(function(){
                     if(channels[channel][0]===null){
                         return "Offline";
                     } else {
-                        return "Streaming" + " " +channels[channel][1];
+                        return "Streaming" + " " + channels[channel][1];
                     }
                 };
                 
