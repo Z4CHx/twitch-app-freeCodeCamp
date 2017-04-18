@@ -94,7 +94,7 @@ $(document).ready(function(){
     
     // listen for user click to sort channels based on a class that was appended when each channel was created and displayed.
     $('#now-streaming-btn').on('click',function(){
-        $("div.Offline").hide();
+        $("div.Offline, div.not-found").hide();
         $(this).addClass("active");
         $('#all-channels-btn').removeClass('active');
     });
