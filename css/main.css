@@ -11,11 +11,20 @@ div {
 }
 */
 
+div.channel {
+    margin-top: 15px;
+}
+
+a.btn-primary {
+    border-radius: 0;
+}
+
 
 div.channel {
     background-color: lightgray;
     color: white;
 }
+
 
 div.channel a {
     color: cornflowerblue;
@@ -28,10 +37,15 @@ div.channel-logo a {
     float: left;
 }
 
+
 div.channel-logo img {
     height: inherit;
     border-radius: 50%;
     border: 4px solid white;
+}
+
+div.no-logo img {
+    border-radius: 0;   
 }
 
 div.channel-id {
@@ -42,3 +56,11 @@ div.channel-id {
 div.stream-status {
     float: left;
 }
+
+footer {
+    
+    margin: 30px auto 0 auto;
+    padding: 15px;
+    
+}
+

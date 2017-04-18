@@ -51,6 +51,17 @@ $(document).ready(function(){
         headers:{
             "Client-ID": "ljvzlno3ci0iq7l7dl0hxww9dx0j0b",
         },
+            
+        statusCode: {
+            404: function(data) {
+            
+            var channelRow = '<div id="' + channel + '" class="row channel Offline"><div class="container-fluid"><div class="panel-body"><div class="channel-logo no-logo col-md-4"><a href ="#"><img src="img/box.svg"></a></div><div class="channel-id col-md-4"><a href="#">' + channel + '</a></div><div class="stream-status col-md-4">Channel Not Found</div></div></div></div>';
+                
+                $("div#channels").append(channelRow);
+                
+            }
+        },
+            
         success: function(data){
             if(channels.hasOwnProperty(channel)) {
                 channels[channel][1] = data.game;
@@ -66,13 +77,26 @@ $(document).ready(function(){
                 
                 var channelRow = '<div id="' + data.display_name +'" class="row channel ' + statusPhrase() +'"><div class="container-fluid"><div class="panel-body"><div class="channel-logo col-md-4"><a href ="' + data.url + '"><img src="' + data.logo + '"></a></div>' + '<div class="channel-id col-md-4"><a href="' + data.url + '">' + data.display_name + '</a></div><div class="stream-status col-md-4">' + statusPhrase() + '</div></div></div></div>';
                 
-                $("body").append(channelRow);
+                $("div#channels").append(channelRow);
                    
             }
 
-        }}); 
+        }, //end success function
+        
+        error:  function (request, status, error) {}
+            
+        }); 
          
     });}, 250);
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     $('#now-streaming-btn').on('click',function(){
         $("div.Offline").hide();
